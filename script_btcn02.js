@@ -11,8 +11,18 @@ export default {
         Header,
         NavBar
     },
+    methods: {
+        changeTheme() {
+            if (document.getElementById("switch").checked) {
+                document.body.style.background = "black";
+            }
+            else {
+                document.body.style.background = "rgb(187, 187, 187)";
+            }
+        }
+    },
     template: `
-    <Header />
+    <Header @change-theme="changeTheme"/>
     <NavBar />
     `
 }
