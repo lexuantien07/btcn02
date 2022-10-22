@@ -1,6 +1,6 @@
 
 import Header from './Vue/header.js'
-
+import NavBar from './Vue/navbar.js'
 export default {
     data() {
         return {
@@ -8,9 +8,11 @@ export default {
         }
     },
     components: {
-        Header
+        Header,
+        NavBar
     },
     template: `
-    
+    <Header />
+    <NavBar />
     `
 }
