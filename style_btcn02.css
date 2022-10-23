@@ -118,3 +118,56 @@ input {
     border: 1px solid rgb(192, 192, 192);
     padding: 5px;
 }
+
+/* Main */
+.main {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.main-left {
+    width: 33.33%;
+    text-align: center;
+    cursor: pointer;
+}
+.main-content {
+    text-align: center;
+    width: 33.33%;
+}
+.main-right {
+    text-align: center;
+    width: 33.33%;
+    cursor: pointer;
+}
+.cnt-img {
+    /* position: relative; */
+    border-radius: 5px;
+}
+.cnt-title {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    bottom: 10%;
+    color: white;
+    /* width: 100px; */
+}
+.navigation {
+    position: absolute;
+    left: 42.5%;
+    bottom: 5%;
+}
+#movie0,#movie1,#movie2,#movie3,#movie4{
+    background: red;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+/* #movie0,#movie1,#movie2,#movie3,#movie4:hover{
+    background: red;
+    width: 20px;
+    height: 3px;
+    margin: 10px;
+} */

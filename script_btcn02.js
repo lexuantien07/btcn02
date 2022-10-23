@@ -11,7 +11,7 @@ export default {
     components: {
         Header,
         NavBar,
-        Main
+        Main,
     },
     methods: {
         changeTheme() {
@@ -36,7 +36,7 @@ export default {
         }
         // this.Movies = data.items;
         this.Movies = test;
-        console.log(this.Movies);
+        // console.log(this.Movies);
     },
     template: `
     <Header @change-theme="changeTheme"/>
@@ -44,3 +44,4 @@ export default {
     <Main :movies="Movies"/>
     `
 }
+
