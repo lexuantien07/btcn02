@@ -165,6 +165,96 @@ input {
     margin: 5px;
     cursor: pointer;
 }
+/* Popular movies */
+.popular {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.popular-left {
+    width: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+.popular-content {
+    text-align: center;
+    width: 90%;
+}
+.popular-right {
+    text-align: center;
+    width: 5%;
+    cursor: pointer;
+}
+.popular-cnt-img {
+    /* position: relative; */
+    border-radius: 5px;
+    height: 150px;
+    margin: 10px;
+}
+.popular-title {
+    position: relative;
+}
+.popular-navigation {
+    position: absolute;
+    right: 0%;
+    bottom: 5%;
+}
+#popular-movie0,#popular-movie1,#popular-movie2,#popular-movie3,#popular-movie4{
+    background: red;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+/* #movie0,#movie1,#movie2,#movie3,#movie4:hover{
+    background: red;
+    width: 20px;
+    height: 3px;
+    margin: 10px;
+} */
+
+
+/* Top Rating movies */
+.toprating {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.toprating-left {
+    width: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+.toprating-content {
+    text-align: center;
+    width: 90%;
+}
+.toprating-right {
+    text-align: center;
+    width: 5%;
+    cursor: pointer;
+}
+.toprating-cnt-img {
+    /* position: relative; */
+    border-radius: 5px;
+    height: 150px;
+    margin: 10px;
+}
+.toprating-title {
+    position: relative;
+}
+.toprating-navigation {
+    position: absolute;
+    right: 0%;
+    bottom: 5%;
+}
+#toprating-movie0,#toprating-movie1,#toprating-movie2,#toprating-movie3,#toprating-movie4{
+    background: red;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
 /* #movie0,#movie1,#movie2,#movie3,#movie4:hover{
     background: red;
     width: 20px;

@@ -15,9 +15,9 @@ export default {
         movies: Array
     },
     methods: {
-        changeTheme() {
-            this.$emit('change-theme');
-        },
+        // changeTheme() {
+        //     this.$emit('change-theme');
+        // },
         changeMovieRight() {
             if (this.checkData >=0 && this.checkData < 4) {
                 this.checkData += 1;
