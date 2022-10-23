@@ -12,9 +12,13 @@ body {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto 0;
-    background-color: rgb(187, 187, 187);
+    
 }
-
+.container {
+    background-color: rgb(187, 187, 187);
+    padding: 5px;
+    border-radius: 5px;
+}
 /* Header */
 .header {
     display: flex;
@@ -101,6 +105,7 @@ label:active:after {
 .label {
     font-size: 17px;
     margin-left: 10px;
+    cursor: pointer;
 }
 button {
     color: #5fb973;
@@ -357,3 +362,35 @@ input {
     height: 3px;
     margin: 10px;
 } */
+
+/* Movie information */
+.info {
+    text-align: center;
+    border: 2px solid rgb(123, 123, 123);
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    color:rgb(43, 43, 43)
+}
+.info>div {
+    margin: 5px;
+
+}
+.info-title {
+
+}
+.info-image {
+    height: 350px;
+}
+.info-director {
+
+}
+.info-plot {
+
+}
+.info-star {
+
+}
+.info-year {
+
+}

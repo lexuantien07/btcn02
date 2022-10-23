@@ -5,6 +5,9 @@ import Main from './Vue/main.js'
 import Popular from './Vue/popular.js'
 import TopRating from './Vue/toprating.js'
 import Movie from './Vue/movie_info.js'
+import MoviePopular from './Vue/movie_info_ppl.js'
+import MovieTopRating from './Vue/movie_info_tr.js'
+
 export default {
     data() {
         return {
@@ -13,6 +16,7 @@ export default {
             topRatingMovies: [],
             checkShow: 1,
             Movie: {},
+            MoviePopular: {},
         }
     },
     components: {
@@ -21,15 +25,17 @@ export default {
         Main,
         Popular,
         TopRating,
-        Movie
+        Movie,
+        MoviePopular,
+        MovieTopRating
     },
     methods: {
         changeTheme(e) {
             if (document.getElementById("switch").checked) {
-                document.body.style.background = "black";
+                document.getElementsByClassName("container")[0].style.background = "black";
             }
             else {
-                document.body.style.background = "rgb(187, 187, 187)";
+                document.getElementsByClassName("container")[0].style.background = "rgb(187, 187, 187)";
             }
         },
         async fetchData() {
@@ -51,6 +57,22 @@ export default {
             this.checkShow = 0;
             this.Movie = obj;
             console.log(this.Movie);
+        },
+        returnHome() {
+            this.checkShow = 1;
+            console.log(this.checkShow);
+        },
+        showInfoPopular(obj) {
+            this.checkShow = 2;
+            this.MoviePopular = obj;
+            console.log("data", obj);
+            console.log("data", this.MoviePopular);
+        },
+        showInfoTopRating(obj) {
+            this.checkShow = 3;
+            this.MovieTopRating = obj;
+            console.log("data", obj);
+            console.log("data", this.MovieTopRating);
         }
     },
     async created() {
@@ -83,11 +105,13 @@ export default {
     },
     template: `
     <Header @change-theme="changeTheme"/>
-    <NavBar />
+    <NavBar @return-home="returnHome"/>
     <Main :movies="Movies" @show-info="showInfo"  v-if="checkShow==1"/>
-    <Popular :pmovies="popularMovies"  v-if="checkShow==1"/>
-    <TopRating :tmovies="topRatingMovies"  v-if="checkShow==1"/>
+    <Popular :pmovies="popularMovies"  @show-info-popular="showInfoPopular" v-if="checkShow==1"/>
+    <TopRating :tmovies="topRatingMovies" @show-info-toprating="showInfoTopRating" v-if="checkShow==1"/>
     <Movie v-if="checkShow==0" :movie="Movie"/>
+    <MoviePopular v-if="checkShow==2" :moviepopular="MoviePopular"/>
+    <MovieTopRating v-if="checkShow==3" :movietoprating="MovieTopRating" />
     `
 }
 

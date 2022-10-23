@@ -41,11 +41,16 @@ export default {
                 // }
             }
             document.getElementById(`toprating-movie${id}`).style.background = "white";
+        },
+        showInfoTopRating(obj) {
+            this.$emit('show-info-toprating', obj);
+            console.log("data1", obj);
         }
     },
     created() {
 
     },
+    emits:['show-info-toprating'],
     template: `
     <div class="toprating-title">
         <span>Top Rating</span>
@@ -59,7 +64,7 @@ export default {
         <div class="toprating-left" @click="changeMovieLeft">&lsaquo;</div>
         <div class="toprating-content" v-if="checkData == 0" style="display: flex">
             <div class="toprating-wrap" v-for="tmovie in tmovies.slice(checkData,checkData+3)">
-                <img class="toprating-cnt-img" :src="tmovie.image" style="width:100%">
+                <img class="toprating-cnt-img" :src="tmovie.image" style="width:100%" @click="showInfoTopRating(tmovie)">
                 <div class="toprating-cnt-layer">
                     <p class="toprating-cnt-title">{{ tmovie.fullTitle }}</p>
                 </div>
@@ -68,7 +73,7 @@ export default {
         </div>
         <div class="toprating-content" v-else-if="checkData >= 3" style="display: flex">
             <div class="toprating-wrap" v-for="tmovie in tmovies.slice(checkData,checkData+3)">
-                <img class="toprating-cnt-img" :src="tmovie.image" style="width:100%">
+                <img class="toprating-cnt-img" :src="tmovie.image" style="width:100%" @click="showInfoTopRating(tmovie)">
                 <div class="toprating-cnt-layer">
                     <p class="toprating-cnt-title">{{ tmovie.fullTitle }}</p>
                 </div>

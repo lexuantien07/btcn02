@@ -51,6 +51,7 @@ export default {
             // var el1 = document.createElement("div");
             // var el1_cont = document.createTextNode(`a`);
             // el1.appendChild(el1_cont);
+            console.log(obj);
         }
     },
     created() {
