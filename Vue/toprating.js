@@ -35,6 +35,12 @@ export default {
             // id = document.getElementById(`movie${id}`)
             // this.checkData = parseInt(document.getElementById(`movie${id}`).innerHTML.toString());
             this.checkData = id * 3;
+            for (let i = 0; i < 5; i++) {
+                // if (document.getElementById(`movie${i}`).style.background == "white") {
+                    document.getElementById(`toprating-movie${i}`).style.background = "rgb(112, 112, 112)";
+                // }
+            }
+            document.getElementById(`toprating-movie${id}`).style.background = "white";
         }
     },
     created() {

@@ -161,12 +161,16 @@ input {
     bottom: 5%;
 }
 #movie0,#movie1,#movie2,#movie3,#movie4{
-    background: red;
+    background: rgb(112, 112, 112);
     width: 25px;
     height: 3px;
     margin: 5px;
     cursor: pointer;
 }
+#movie0 {
+    background-color: white;
+}
+
 /* Popular movies */
 .popular {
     display: flex;
@@ -241,11 +245,14 @@ input {
     bottom: 5%;
 }
 #popular-movie0,#popular-movie1,#popular-movie2,#popular-movie3,#popular-movie4{
-    background: red;
+    background: rgb(112, 112, 112);
     width: 25px;
     height: 3px;
     margin: 5px;
     cursor: pointer;
+}
+#popular-movie0 {
+    background-color: white;
 }
 /* #movie0,#movie1,#movie2,#movie3,#movie4:hover{
     background: red;
@@ -312,7 +319,7 @@ input {
     height: 30px;
     opacity: 1;
     border-radius: 5px;
-    z-index: 2;
+    z-index: 1;
     transition: width 1s, height 1s, opacity .5s;
     background-color: rgb(43, 43, 43);
     color: rgb(213, 213, 213);
@@ -335,11 +342,14 @@ input {
     bottom: 5%;
 }
 #toprating-movie0,#toprating-movie1,#toprating-movie2,#toprating-movie3,#toprating-movie4{
-    background: red;
+    background: rgb(112, 112, 112);
     width: 25px;
     height: 3px;
     margin: 5px;
     cursor: pointer;
+}
+#toprating-movie0 {
+    background-color: white;
 }
 /* #movie0,#movie1,#movie2,#movie3,#movie4:hover{
     background: red;

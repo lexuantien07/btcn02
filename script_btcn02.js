@@ -4,13 +4,15 @@ import NavBar from './Vue/navbar.js'
 import Main from './Vue/main.js'
 import Popular from './Vue/popular.js'
 import TopRating from './Vue/toprating.js'
-
+import Movie from './Vue/movie_info.js'
 export default {
     data() {
         return {
             Movies: {},
             popularMovies: [],
             topRatingMovies: [],
+            checkShow: 1,
+            Movie: {},
         }
     },
     components: {
@@ -18,10 +20,11 @@ export default {
         NavBar,
         Main,
         Popular,
-        TopRating
+        TopRating,
+        Movie
     },
     methods: {
-        changeTheme() {
+        changeTheme(e) {
             if (document.getElementById("switch").checked) {
                 document.body.style.background = "black";
             }
@@ -43,6 +46,11 @@ export default {
             const res = await fetch('../db/250movies.json');
             const tdata = await res.json();
             return tdata;
+        },
+        showInfo(obj) {
+            this.checkShow = 0;
+            this.Movie = obj;
+            console.log(this.Movie);
         }
     },
     async created() {
@@ -76,9 +84,10 @@ export default {
     template: `
     <Header @change-theme="changeTheme"/>
     <NavBar />
-    <Main :movies="Movies"/>
-    <Popular :pmovies="popularMovies"/>
-    <TopRating :tmovies="topRatingMovies"/>
+    <Main :movies="Movies" @show-info="showInfo"  v-if="checkShow==1"/>
+    <Popular :pmovies="popularMovies"  v-if="checkShow==1"/>
+    <TopRating :tmovies="topRatingMovies"  v-if="checkShow==1"/>
+    <Movie v-if="checkShow==0" :movie="Movie"/>
     `
 }
 

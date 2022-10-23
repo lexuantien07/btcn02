@@ -1,5 +1,5 @@
 
-// import Movie from './main_movie.js'
+
 
 export default {
     data() {
@@ -38,23 +38,37 @@ export default {
             // id = document.getElementById(`movie${id}`)
             // this.checkData = parseInt(document.getElementById(`movie${id}`).innerHTML.toString());
             this.checkData = id;
+            for (let i = 0; i < 5; i++) {
+                // if (document.getElementById(`movie${i}`).style.background == "white") {
+                    document.getElementById(`movie${i}`).style.background = "rgb(112, 112, 112)";
+                // }
+            }
+            document.getElementById(`movie${id}`).style.background = "white";
+
+        },
+        showInfo(obj) {
+            this.$emit('show-info', obj);
+            // var el1 = document.createElement("div");
+            // var el1_cont = document.createTextNode(`a`);
+            // el1.appendChild(el1_cont);
         }
     },
     created() {
 
     },
-    template: `
+    emits:['show-info'],
+    template: ` 
     <div class="main" style="display: flex">
         <div class="main-left" @click="changeMovieLeft">&lsaquo;</div>
         <div class="main-content" v-if="checkData == 0">
-            <img class="cnt-img" :src="movies[this.checkData].image" style="width:100%">
-            <h4 class="cnt-title">{{ movies[this.checkData].fullTitle }}</h4>
+            <img class="cnt-img" :src="movies[checkData].image" style="width:100%" @click="showInfo(movies[checkData])">
+            <h4 class="cnt-title">{{ movies[checkData].fullTitle }}</h4>
             
 
         </div>
         <div class="main-content" v-else-if="checkData >= 1">
-            <img class="cnt-img" :src="movies[this.checkData].image" style="width:100%">
-            <h4 class="cnt-title">{{ movies[this.checkData].fullTitle }}</h4>
+            <img class="cnt-img" :src="movies[checkData].image" style="width:100%" @click="showInfo(movies[checkData])">
+            <h4 class="cnt-title">{{ movies[checkData].fullTitle }}</h4>
         </div>
         <div class="main-right" @click="changeMovieRight">&rsaquo;</div>
         <div class="navigation" style="display:flex">
