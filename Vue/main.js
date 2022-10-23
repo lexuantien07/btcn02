@@ -45,7 +45,7 @@ export default {
     },
     template: `
     <div class="main" style="display: flex">
-        <div class="main-left" @click="changeMovieLeft">&lt</div>
+        <div class="main-left" @click="changeMovieLeft">&lsaquo;</div>
         <div class="main-content" v-if="checkData == 0">
             <img class="cnt-img" :src="movies[this.checkData].image" style="width:100%">
             <h4 class="cnt-title">{{ movies[this.checkData].fullTitle }}</h4>
@@ -56,7 +56,7 @@ export default {
             <img class="cnt-img" :src="movies[this.checkData].image" style="width:100%">
             <h4 class="cnt-title">{{ movies[this.checkData].fullTitle }}</h4>
         </div>
-        <div class="main-right" @click="changeMovieRight">&gt</div>
+        <div class="main-right" @click="changeMovieRight">&rsaquo;</div>
         <div class="navigation" style="display:flex">
             <div v-for="id in ids">
                 <div :id="'movie' + id" @click="changeMovie(id)"></div>

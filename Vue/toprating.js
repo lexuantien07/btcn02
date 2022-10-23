@@ -42,7 +42,7 @@ export default {
     },
     template: `
     <div class="toprating-title">
-        <span>Most Popular</span>
+        <span>Top Rating</span>
         <div class="toprating-navigation" style="display:flex">
             <div v-for="id in ids">
                 <div :id="'toprating-movie' + id" @click="changeMovie(id)"></div>
@@ -50,18 +50,25 @@ export default {
         </div>
     </div>
     <div class="toprating" style="display: flex">
-        <div class="toprating-left" @click="changeMovieLeft">&lt</div>
+        <div class="toprating-left" @click="changeMovieLeft">&lsaquo;</div>
         <div class="toprating-content" v-if="checkData == 0" style="display: flex">
-            <div v-for="tmovie in tmovies.slice(checkData,checkData+3)">
-                <img class="toprating-cnt-img" :src="tmovie.image" style="width:250px">
+            <div class="toprating-wrap" v-for="tmovie in tmovies.slice(checkData,checkData+3)">
+                <img class="toprating-cnt-img" :src="tmovie.image" style="width:100%">
+                <div class="toprating-cnt-layer">
+                    <p class="toprating-cnt-title">{{ tmovie.fullTitle }}</p>
+                </div>
+                
             </div>
         </div>
         <div class="toprating-content" v-else-if="checkData >= 3" style="display: flex">
-            <div v-for="tmovie in tmovies.slice(checkData,checkData+3)">
-                <img class="toprating-cnt-img" :src="tmovie.image" style="width:250px">
+            <div class="toprating-wrap" v-for="tmovie in tmovies.slice(checkData,checkData+3)">
+                <img class="toprating-cnt-img" :src="tmovie.image" style="width:100%">
+                <div class="toprating-cnt-layer">
+                    <p class="toprating-cnt-title">{{ tmovie.fullTitle }}</p>
+                </div>
             </div>
         </div>
-        <div class="toprating-right" @click="changeMovieRight">&gt</div>
+        <div class="toprating-right" @click="changeMovieRight">&rsaquo;</div>
 
     </div>
 

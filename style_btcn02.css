@@ -129,6 +129,7 @@ input {
     width: 33.33%;
     text-align: center;
     cursor: pointer;
+    color: white;
 }
 .main-content {
     text-align: center;
@@ -138,6 +139,7 @@ input {
     text-align: center;
     width: 33.33%;
     cursor: pointer;
+    color: white;
 }
 .cnt-img {
     /* position: relative; */
@@ -175,21 +177,60 @@ input {
     width: 5%;
     text-align: center;
     cursor: pointer;
+    color: white;
 }
 .popular-content {
+    position: relative;
     text-align: center;
     width: 90%;
+    justify-content: space-between;   
+}
+.popular-content>div {
+    width: 33%;
 }
 .popular-right {
     text-align: center;
     width: 5%;
     cursor: pointer;
+    color: white;
 }
 .popular-cnt-img {
-    /* position: relative; */
     border-radius: 5px;
     height: 150px;
     margin: 10px;
+}
+.popular-cnt-img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transition: transform .2s;
+    transform: scale(1.5);
+    z-index: 1;
+}
+.popular-wrap {
+    position: relative;
+}
+.popular-wrap:hover .popular-cnt-layer {
+    visibility: visible;
+    background-color: #3041dd;
+    bottom: -13%;
+    left: -22%;
+    width: 150%;
+    height: 30px;
+    opacity: 1;
+    border-radius: 5px;
+    z-index: 2;
+    transition: width 1s, height 1s, opacity .5s;
+    background-color: rgb(43, 43, 43);
+    color: rgb(213, 213, 213);
+}
+
+
+.popular-cnt-layer {
+    position: absolute;
+    visibility: hidden;
+    width: 150%;
+    height: 0;
+    opacity: 0;
 }
 .popular-title {
     position: relative;
@@ -224,21 +265,66 @@ input {
     width: 5%;
     text-align: center;
     cursor: pointer;
+    color: white;
 }
 .toprating-content {
     text-align: center;
     width: 90%;
+    justify-content: space-between; 
+}
+.toprating-content>div {
+    width: 33%;
 }
 .toprating-right {
     text-align: center;
     width: 5%;
     cursor: pointer;
+    color: white;
 }
 .toprating-cnt-img {
     /* position: relative; */
     border-radius: 5px;
     height: 150px;
     margin: 10px;
+}
+.toprating-cnt-img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transition: transform .2s;
+    transform: scale(1.5); 
+}
+.toprating-cnt-img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transition: transform .2s;
+    transform: scale(1.5);
+    z-index: 1;
+}
+.toprating-wrap {
+    position: relative;
+}
+.toprating-wrap:hover .toprating-cnt-layer {
+    visibility: visible;
+    background-color: #3041dd;
+    bottom: -13%;
+    left: -22%;
+    width: 150%;
+    height: 30px;
+    opacity: 1;
+    border-radius: 5px;
+    z-index: 2;
+    transition: width 1s, height 1s, opacity .5s;
+    background-color: rgb(43, 43, 43);
+    color: rgb(213, 213, 213);
+}
+
+
+.toprating-cnt-layer {
+    position: absolute;
+    visibility: hidden;
+    width: 150%;
+    height: 0;
+    opacity: 0;
 }
 .toprating-title {
     position: relative;

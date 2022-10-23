@@ -50,18 +50,24 @@ export default {
         </div>
     </div>
     <div class="popular" style="display: flex">
-        <div class="popular-left" @click="changeMovieLeft">&lt</div>
+        <div class="popular-left" @click="changeMovieLeft">&lsaquo;</div>
         <div class="popular-content" v-if="checkData == 0" style="display: flex">
-            <div v-for="pmovie in pmovies.slice(checkData,checkData+3)">
-                <img class="popular-cnt-img" :src="pmovie.image" style="width:250px">
+            <div class="popular-wrap" v-for="pmovie in pmovies.slice(checkData,checkData+3)">
+                <img class="popular-cnt-img" :src="pmovie.image" style="width:100%">
+                <div class="popular-cnt-layer">
+                    <p class="popular-cnt-title">{{ pmovie.fullTitle }}</p>
+                </div>
             </div>
         </div>
         <div class="popular-content" v-else-if="checkData >= 3" style="display: flex">
-            <div v-for="pmovie in pmovies.slice(checkData,checkData+3)">
-                <img class="popular-cnt-img" :src="pmovie.image" style="width:250px">
+            <div class="popular-wrap" v-for="pmovie in pmovies.slice(checkData,checkData+3)">
+                <img class="popular-cnt-img" :src="pmovie.image" style="width:100%">
+                <div class="popular-cnt-layer">
+                    <p class="popular-cnt-title">{{ pmovie.fullTitle }}</p>
+                </div>
             </div>
         </div>
-        <div class="popular-right" @click="changeMovieRight">&gt</div>
+        <div class="popular-right" @click="changeMovieRight">&rsaquo;</div>
 
     </div>
 
