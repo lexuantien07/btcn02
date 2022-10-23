@@ -15,7 +15,7 @@ export default {
             <input type="checkbox" id="switch" @click="changeTheme"/>
             <label for="switch"></label>
                 
-            <div class="">Dark mode</div>     
+            <div class="header-d">Dark mode</div>     
         </div>
     
     `

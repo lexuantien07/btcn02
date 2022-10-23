@@ -53,7 +53,7 @@ export default {
     emits:['show-info-toprating'],
     template: `
     <div class="toprating-title">
-        <span>Top Rating</span>
+        <span class="toprating-span">Top Rating</span>
         <div class="toprating-navigation" style="display:flex">
             <div v-for="id in ids">
                 <div :id="'toprating-movie' + id" @click="changeMovie(id)"></div>

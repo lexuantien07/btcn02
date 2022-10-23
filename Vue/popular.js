@@ -56,7 +56,7 @@ export default {
     emits:['show-info-popular'],
     template: `
     <div class="popular-title">
-        <span>Most Popular</span>
+        <span class="popular-span">Most Popular</span>
         <div class="popular-navigation" style="display:flex">
             <div v-for="id in ids">
                 <div :id="'popular-movie' + id" @click="changeMovie(id)"></div>

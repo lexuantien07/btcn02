@@ -33,9 +33,45 @@ export default {
         changeTheme(e) {
             if (document.getElementById("switch").checked) {
                 document.getElementsByClassName("container")[0].style.background = "black";
+                document.getElementsByClassName("header")[0].style.background = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header")[1].style.background = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-title")[0].style.color = "white";
+                document.getElementsByClassName("header-title")[1].style.color = "white";
+                document.getElementsByClassName("home")[0].style.background = "rgb(33, 33, 33)";
+                document.getElementsByClassName("home")[1].style.background = "rgb(33, 33, 33)";
+                document.getElementsByTagName("button")[0].style.background = "black";
+                document.getElementsByTagName("button")[1].style.background = "black";
+                document.getElementsByClassName("header-key")[0].style.color = "white";
+                document.getElementsByClassName("header-key")[1].style.color = "white";
+                document.getElementsByClassName("header-d")[0].style.color = "white";
+                document.getElementsByClassName("header-d")[1].style.color = "white";
+                document.getElementsByClassName("header-ms")[0].style.color = "white";
+                document.getElementsByClassName("header-ms")[1].style.color = "white";
+                document.getElementsByClassName("label")[0].style.color = "white";
+                document.getElementsByClassName("label")[1].style.color = "white";
+                document.getElementsByClassName("popular-span")[0].style.color = "white";
+                document.getElementsByClassName("toprating-span")[0].style.color = "white";
             }
             else {
                 document.getElementsByClassName("container")[0].style.background = "rgb(187, 187, 187)";
+                document.getElementsByClassName("header")[0].style.background = "white";
+                document.getElementsByClassName("header")[1].style.background = "white";
+                document.getElementsByClassName("header-title")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-title")[1].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("home")[0].style.background = "white";
+                document.getElementsByClassName("home")[1].style.background = "white";
+                document.getElementsByTagName("button")[0].style.background = "white";
+                document.getElementsByTagName("button")[1].style.background = "white";
+                document.getElementsByClassName("header-key")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-key")[1].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-d")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-d")[1].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-ms")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("header-ms")[1].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("label")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("label")[1].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("popular-span")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("toprating-span")[0].style.color = "rgb(33, 33, 33)";
             }
         },
         async fetchData() {
@@ -73,6 +109,9 @@ export default {
             this.MovieTopRating = obj;
             console.log("data", obj);
             console.log("data", this.MovieTopRating);
+        },
+        search() {
+
         }
     },
     async created() {

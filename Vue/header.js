@@ -14,7 +14,7 @@ export default {
     <div class="header-ms">20120593</div>
     <div class="header-title">Movies info</div>
     <div class="header-1">
-        <div class="">Key API</div>
+        <div class="header-key">Key API</div>
         <CheckDark @change-theme="$emit('change-theme')"/>
     </div>
 </div>
