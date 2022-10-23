@@ -7,6 +7,7 @@ import TopRating from './Vue/toprating.js'
 import Movie from './Vue/movie_info.js'
 import MoviePopular from './Vue/movie_info_ppl.js'
 import MovieTopRating from './Vue/movie_info_tr.js'
+import Footer from './Vue/footer.js'
 
 export default {
     data() {
@@ -27,7 +28,8 @@ export default {
         TopRating,
         Movie,
         MoviePopular,
-        MovieTopRating
+        MovieTopRating,
+        Footer
     },
     methods: {
         changeTheme(e) {
@@ -51,6 +53,9 @@ export default {
                 document.getElementsByClassName("label")[1].style.color = "white";
                 document.getElementsByClassName("popular-span")[0].style.color = "white";
                 document.getElementsByClassName("toprating-span")[0].style.color = "white";
+                document.getElementsByClassName("footer")[0].style.background = "rgb(33, 33, 33)";
+                document.getElementsByClassName("footer-ms")[0].style.color = "white";
+                document.getElementsByClassName("footer-title")[0].style.color = "white";
             }
             else {
                 document.getElementsByClassName("container")[0].style.background = "rgb(187, 187, 187)";
@@ -72,6 +77,9 @@ export default {
                 document.getElementsByClassName("label")[1].style.color = "rgb(33, 33, 33)";
                 document.getElementsByClassName("popular-span")[0].style.color = "rgb(33, 33, 33)";
                 document.getElementsByClassName("toprating-span")[0].style.color = "rgb(33, 33, 33)";
+                document.getElementsByClassName("footer")[0].style.background = "white";
+                document.getElementsByClassName("footer-ms")[0].style.color = "black";
+                document.getElementsByClassName("footer-title")[0].style.color = "black";
             }
         },
         async fetchData() {
@@ -151,6 +159,7 @@ export default {
     <Movie v-if="checkShow==0" :movie="Movie"/>
     <MoviePopular v-if="checkShow==2" :moviepopular="MoviePopular"/>
     <MovieTopRating v-if="checkShow==3" :movietoprating="MovieTopRating" />
+    <Footer />
     `
 }
 

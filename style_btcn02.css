@@ -376,21 +376,24 @@ input {
     margin: 5px;
 
 }
-.info-title {
-
-}
 .info-image {
     height: 350px;
 }
-.info-director {
 
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 30px;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
 }
-.info-plot {
-
+.footer-ms {
+    margin: 10px;
 }
-.info-star {
-
-}
-.info-year {
-
+.footer-title {
+    
+    margin: 10px;
 }
